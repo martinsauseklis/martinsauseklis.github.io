@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width:100%;
+    background-color: black;
+}
+
+#nav-bar {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    border-bottom: 25px dotted white;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1000px){
+    #nav-bar {
+        justify-content: space-between;
+    }
+}
+
+#logo {
+    position: absolute;
+    left: 2vw;
+    align-self: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+    color: rgba(171, 183, 183, 1);
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 1000px){
+    #logo {
+        position: static;
+        margin-left: 2vw;
+    }
+}
+
+#main-nav {
+    display: flex;
+    column-gap: 2vw;
+    align-self: center;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1000px){
+    #main-nav {
+        margin-right: 2vw;
+    }
+}
+
+
+
+#main-nav ul {
+    align-self: center;
+    white-space: nowrap;
+}
+
+main {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 95px;
+    display: grid;
+    grid-template-columns: repeat(12, calc(100vw/12));
+    grid-template-rows: repeat(10, calc(100vh/10));
+}
+
+main section {
+    height: 100%;
+    width: 100%;
+}
+
+main #first {
+    grid-area: 1/1/7/13;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(12, calc(100vw/12));
+    grid-template-rows: 60vh;
+    column-gap: 1vw;
+}
+
+main #first .img-container {
+    grid-area: 1/1/2/7;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    min-height: 20rem;
+    
+}
+
+main section div img {
+    height: auto;
+    width: 100%;
+    border-top-right-radius: 9% 75%;
+    border-bottom-right-radius: 9% 75%;
+    object-fit: contain;
+    object-position: left;
+}
+
+main #first .descr {
+    grid-area: 1/7/2/13;
+    color: white;
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 1.5vh;
+    align-items: center;
+
+    
+}
+
+.descr a {
+    
+}
+
+.descr p {
+    text-align:justify;
+}
+
