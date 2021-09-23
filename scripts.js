@@ -1,15 +1,23 @@
-/*const tennisImg = document.getElementById('tennis')
+function onMouseOver(id, id2) {
+    document.getElementById(id).style.gridColumnStart = "1"
+    document.getElementById(id).style.gridColumnEnd = "13"
+    document.getElementById(id2).style.display = "none"
+}
 
-tennisImg.addEventListener("mouseover", () => {
-    document.getElementById("tennis-container").style.gridArea = "1/1/2/11"
-    document.getElementById("tennis-descr").style.gridArea = "1/11/2/13"
-    document.getElementById("tennis-p").style.display = "none"
-})
+function onMouseOut(id, id2) {
+    document.getElementById(id).style.gridColumnStart = "1"
+    document.getElementById(id).style.gridColumnEnd = "8"
+    document.getElementById(id2).style.display = "flex"
+}
 
-tennisImg.addEventListener("mouseout", () => {
-    document.getElementById("tennis-container").style.gridArea = "1/1/2/8"
-    document.getElementById("tennis-descr").style.gridArea = "1/8/2/13"
-    document.getElementById("tennis-p").style.display = "block"
-})
+function onMouseOverOpp(id, id2) {
+    document.getElementById(id).style.gridColumnStart = "1"
+    document.getElementById(id).style.gridColumnEnd = "13"
+    document.getElementById(id2).style.display = "none"
+}
 
-*/
+function onMouseOutOpp(id, id2) {
+    document.getElementById(id).style.gridColumnStart = "6"
+    document.getElementById(id).style.gridColumnEnd = "13"
+    document.getElementById(id2).style.display = "flex"
+}
