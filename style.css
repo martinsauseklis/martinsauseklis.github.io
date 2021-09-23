@@ -238,3 +238,15 @@ h1 {
     padding-top: 100px;
     margin-top: -95px;
 }
+
+.logos {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.logo {
+    height: 30px;
+    width: auto;
+}
