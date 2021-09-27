@@ -442,5 +442,103 @@ input[type="submit"]:hover {
     grid-area: 9/1/11/13;
 }
 
+/*SKILLS PAGE*/
+
+#skills-main {
+    position: absolute;
+    display:grid;
+    width: 95%;
+    height: 100%;
+    left: 2.5%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, calc(100vh/10)) 90px 90px;
+}
+
+#my-skills {
+    grid-area: 1/1/2/13;
+    padding-top: 100px;
+    margin-top: -95px;
+}
+
+
+
+#skills-main footer {
+    grid-area: 9/1/11/13;
+    width: 100%;
+    height: 100%;
+}
+
+#year-path {
+    grid-area: 2/1/9/7;
+    width: 100%;
+    height: 100%;
+    border-collapse:collapse;
+}
+
+#year-path tr td {
+    height: 10vh;
+    width: 10vw;
+    margin:0;
+    padding:0;
+    
+}
+
+
+
+.side {
+    border-right: 5px dashed white;
+}
+
+
+.text {
+    border-bottom: 5px dashed white;
+}
+
+#year-path h2 {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#year-path p {
+    width: 100%;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#skill-level {
+    grid-area: 2/8/9/13;
+    
+   
+}
+
+.skill {
+    display: flex;
+    margin-bottom: 1vh;
+}
+
+.skill-img {
+    width: auto;
+    height: 10vh;
+    object-fit: contain;
+    
+}
+
+.skill-table {
+    width: 100%;
+    height: 3vh;
+}
+
+.fill {
+    background-color: white;
+}
+
+.skill-table td {
+    border: 1px solid white;
+}
+
 
 
