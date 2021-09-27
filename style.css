@@ -93,6 +93,36 @@ main {
     row-gap: 2vh;
 }
 
+@media only screen and (max-width: 600px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    main #first {
+        grid-area: 2/1/8/5;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #tennis-container {
+        grid-area: 1/1/2/5;
+        width: 100%;
+    }
+
+    main #first .descr {
+        display: none;
+    }
+
+    .descr p {
+        display: none;
+    }
+
+    .descr h2 {
+        display: none;
+    }
+
+
+}
+
 
 
 main #first {
@@ -459,6 +489,8 @@ input[type="submit"]:hover {
     padding-top: 100px;
     margin-top: -95px;
 }
+
+
 
 
 
