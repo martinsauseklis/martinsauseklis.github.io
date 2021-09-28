@@ -57,9 +57,10 @@ body {
     }
 }
 
+
+
 #main-nav {
     display: flex;
-    
     align-self: center;
     height: 100%;
 }
@@ -67,6 +68,12 @@ body {
 @media only screen and (max-width: 1000px){
     #main-nav {
         margin-right: 2vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #main-nav {
+        display: none;
     }
 }
 
@@ -78,7 +85,6 @@ body {
 #main-nav ul li{
     align-self: center;
     white-space: nowrap;
-
     list-style: none;
 }
 
@@ -96,33 +102,10 @@ main {
 @media only screen and (max-width: 600px) {
     main {
         grid-template-columns: repeat(4, 1fr);
+        grid-template-rows:  repeat(4, minmax(min-content, max-content)) 90px 90px;
+        
     }
-
-    main #first {
-        grid-area: 2/1/8/5;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    #tennis-container {
-        grid-area: 1/1/2/5;
-        width: 100%;
-    }
-
-    main #first .descr {
-        display: none;
-    }
-
-    .descr p {
-        display: none;
-    }
-
-    .descr h2 {
-        display: none;
-    }
-
-
 }
-
 
 
 main #first {
@@ -136,8 +119,20 @@ main #first {
     
     
 }
+@media only screen and (max-width: 600px) {
+    main #first{
+        position: relative;
+        grid-area: 2/1/3/5;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        row-gap: 6vh;
+        
+    }
+}
+
 
 main #first .img-container {
+    
     grid-area: 1/1/2/8;
     display: flex;
     height: 100%;
@@ -145,18 +140,35 @@ main #first .img-container {
     min-height: 20rem;
 }
 
+@media only screen and (max-width: 600px) {
+    main #first .img-container {
+        position: relative;
+        grid-area: 1/1/2/5;
+        min-height: unset;
+        
+    }
+}
+
 #tennis-container {
     grid-area: 1/1/2/8;
 }
 
+
+
 main section div #tennis, main section div #tea {
-    height: auto;
+    position: relative;
+    height: 100%;
     width: 100%;
     border-top-right-radius: 9% 75%;
     border-bottom-right-radius: 9% 75%;
     object-fit: contain;
     object-position: left;
 }
+
+
+
+
+
 
 main section div #flexer {
     height: auto;
@@ -181,7 +193,14 @@ main #first .descr {
     row-gap: 1.5vh;
     align-items: center;
     justify-content: center;
-    
+}
+
+@media only screen and (max-width: 600px) {
+    main #first .descr {
+        grid-area: 2/1/3/5;
+        height: fit-content;
+        justify-content: flex-start;
+    }
 }
 
 
@@ -198,9 +217,17 @@ main #second {
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 60vh;
-    
-    
+    grid-template-rows: 60vh;    
+}
+
+@media only screen and (max-width: 600px) {
+    main #second {
+        position: relative;
+        grid-area: 3/1/4/5;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        row-gap: 6vh;
+    }
 }
 
 main #second .img-container {
@@ -210,6 +237,15 @@ main #second .img-container {
     width: 100%;
     min-height: 20rem;
    
+    
+}
+
+@media only screen and (max-width: 600px) {
+    main #second .img-container{
+        grid-area: 1/1/2/5;
+        min-height: unset;
+        height: fit-content;
+    }
     
 }
 
@@ -225,6 +261,15 @@ main #second .descr {
     justify-content: center;
 }
 
+@media only screen and (max-width: 600px) {
+    main #second .descr{
+        grid-area: 2/1/3/5;
+        height: fit-content;
+        justify-content: flex-start;
+    }
+    
+}
+
 main #third {
     grid-area: 14/1/20/13;
     width: 100%;
@@ -235,12 +280,28 @@ main #third {
     grid-template-rows: 60vh;
 }
 
+@media only screen and (max-width: 600px) {
+    main #third {
+        grid-area: 4/1/5/5;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+        
+}
+
 main #third .img-container {
     grid-area: 1/1/2/8;
     display: flex;
     height: 100%;
     width: 100%;
     min-height: 20rem;
+}
+
+@media only screen and (max-width: 600px) {
+    main #third .img-container {
+        grid-area: 1/1/2/5;
+        min-height: unset;
+        height: fit-content;
+    }
 }
 
 main #third .descr {
@@ -255,6 +316,15 @@ main #third .descr {
     justify-content: center;
 }
 
+@media only screen and (max-width: 600px) {
+    main #third .descr {
+        grid-area: 2/1/3/5;
+        height: fit-content;
+        justify-content: flex-start;
+    }
+
+}
+
 #tennis, #flexer, #tea {
     border: 1px solid white;
 }
@@ -263,6 +333,13 @@ h1 {
     grid-area: 1/1/2/13;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        grid-area: 1/1/2/5;
+        
+    }
 }
 
 #my-proj {
@@ -291,6 +368,12 @@ footer {
     display: flex;
     flex-flow:column;
     align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        grid-area: 5/1/7/5;
+    }
 }
 
 #footer-nav {
@@ -382,15 +465,27 @@ td a:hover {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, calc(100vh/10)) 90px 90px;
+    grid-template-rows: repeat(8, minmax(min-content, max-content)) 90px 90px;
     width: 100%;
     height: 100%;   
+}
+
+@media only screen and (max-width: 600px) {
+    #contact-main {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 #contact-me {
     grid-area: 1/1/2/13;
     padding-top: 100px;
     margin-top: -95px;
+}
+
+@media only screen and (max-width: 600px) {
+    #contact-me {
+        grid-area: 1/1/2/5;
+    }
 }
 
 
@@ -403,10 +498,15 @@ td a:hover {
     
 }
 
+@media only screen and (max-width: 600px) {
+    #form {
+        grid-area: 2/1/9/5;
+    }
+}
+
 form {
     position: relative;
     display: block;
-    
     width: 95%;
     height: 100%;
     margin: 0 auto;
@@ -472,7 +572,20 @@ input[type="submit"]:hover {
     grid-area: 9/1/11/13;
 }
 
+@media only screen and (max-width: 600px) {
+    #contact-main footer {
+        grid-area: 9/1/11/5;
+    }
+}
+
 /*SKILLS PAGE*/
+
+#skills {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
 #skills-main {
     position: absolute;
@@ -484,13 +597,26 @@ input[type="submit"]:hover {
     grid-template-rows: repeat(8, calc(100vh/10)) 90px 90px;
 }
 
+@media only screen and (max-width: 600px) {
+    #skills-main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(10, minmax(min-content, max-content)) 90px 90px;
+        left: unset;
+        width: 100%;
+    }
+}
+
 #my-skills {
     grid-area: 1/1/2/13;
     padding-top: 100px;
     margin-top: -95px;
 }
 
-
+@media only screen and (max-width: 600px) {
+    #my-skills {
+        grid-area: 1/1/2/5;
+    }
+}
 
 
 
@@ -500,11 +626,25 @@ input[type="submit"]:hover {
     height: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+    #skills-main footer {
+        grid-area: 11/1/13/5;
+    }
+}
+
 #year-path {
     grid-area: 2/1/9/7;
     width: 100%;
     height: 100%;
     border-collapse:collapse;
+}
+
+@media only screen and (max-width: 600px) {
+    #year-path {
+        grid-area: 2/1/9/5;
+        width:75%;
+        margin: 0 auto;
+    }
 }
 
 #year-path tr td {
@@ -515,10 +655,17 @@ input[type="submit"]:hover {
     
 }
 
+@media only screen and (max-width: 600px) {
+    #year-path tr td {
+        height: 2vw;
+        font-size: smaller;
+    }
+}
+
 
 
 .side {
-    border-right: 5px dashed white;
+    border-right: 10px dashed white;
 }
 
 
@@ -544,7 +691,15 @@ input[type="submit"]:hover {
 #skill-level {
     grid-area: 2/8/9/13;
     
-   
+}
+
+@media only screen and (max-width: 600px) {
+    #skill-level {
+        grid-area: 9/1/11/5;
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 2vw;
+    }
 }
 
 .skill {
