@@ -293,6 +293,9 @@ main #first .descr {
         height: fit-content;
         justify-content: flex-start;
     }
+    main #first .descr h2 {
+        text-align: center;
+    }
 }
 
 
