@@ -1,5 +1,5 @@
 function onMouseOver(id, id2) {
-    if (document.getElementById(id).style.gridColumnEnd === "8") {
+    if (!window.matchMedia("(max-width: 600px)").matches) {
         document.getElementById(id).style.gridColumnStart = "1"
         document.getElementById(id).style.gridColumnEnd = "13"
         document.getElementById(id2).style.display = "none"
@@ -8,7 +8,7 @@ function onMouseOver(id, id2) {
 }
 
 function onMouseOut(id, id2) {
-    if (document.getElementById(id).style.gridColumnEnd === "13") {
+    if (!window.matchMedia("(max-width: 600px)").matches) {
         document.getElementById(id).style.gridColumnStart = "1"
         document.getElementById(id).style.gridColumnEnd = "8"
         document.getElementById(id2).style.display = "flex"
@@ -16,7 +16,7 @@ function onMouseOut(id, id2) {
 }
 
 function onMouseOverOpp(id, id2) {
-    if (document.getElementById(id).style.gridColumnStart === "6") {
+    if (!window.matchMedia("(max-width: 600px)").matches) {
         document.getElementById(id).style.gridColumnStart = "1"
         document.getElementById(id).style.gridColumnEnd = "13"
         document.getElementById(id2).style.display = "none"
@@ -24,7 +24,7 @@ function onMouseOverOpp(id, id2) {
 }
 
 function onMouseOutOpp(id, id2) {
-    if (document.getElementById(id).style.gridColumnStart === "1") {
+    if (!window.matchMedia("(max-width: 600px)").matches) {
         document.getElementById(id).style.gridColumnStart = "6"
         document.getElementById(id).style.gridColumnEnd = "13"
         document.getElementById(id2).style.display = "flex"
