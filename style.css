@@ -6,15 +6,17 @@
 }
 
 html {
-    height: 100%;
+    position: relative;
+    min-height: fit-content;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
-    height: 100%;
-    width:100%;
+    position: relative;
+    min-height: 100%;
+    width: 100%;
     background-color: black;
     margin: 0;
     padding: 0;
@@ -181,14 +183,14 @@ body {
 }
 
 main {
-    position: absolute;
+    position: relative;
     
     width: 100%;
-    height: minmax(min-content, max-content);
+    height: 100%;
     top: 95px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(19, calc(100vh/10)) 90px 90px;
+    grid-template-rows: repeat(19, calc(100vh/10)) 90px;
     row-gap: 2vh;
 }
 
@@ -457,20 +459,17 @@ h1 {
 
 footer {
     position: relative;
-    grid-area: 20/1/22/13;
+    
     background-color: white;
-    height: 100%;
+    height: fit-content;
     width: 100%;
     display: flex;
-    flex-flow:column;
+    flex-flow: column;
     align-items: center;
+    
 }
 
-@media only screen and (max-width: 600px) {
-    footer {
-        grid-area: 5/1/7/5;
-    }
-}
+
 
 #footer-nav {
     width: 100%;
@@ -558,20 +557,20 @@ td a:hover {
 /*CONTACT PAGE*/
 
 #contact-body {
-    
-    height: fit-content;
+    height: 100%;
     width: 100%;
     
     
 }
 
 #contact-main {
-    position: absolute;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, minmax(min-content, max-content)) 90px 90px;
+    grid-template-rows: repeat(8, minmax(min-content, max-content)) 190px;
+    row-gap: 5vh;
     width: 100%;
-    height: minmax(min-content, max-content);
+    height: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -635,7 +634,7 @@ input, textarea, label {
 
 input[type="email"] {
     width: 20vw;
-    min-width: 200px;
+    min-width: 400px;
 }
 
 textarea {
@@ -673,34 +672,25 @@ input[type="submit"]:hover {
     color: white;
 }
 
-#contact-main footer {
-    grid-area: 9/1/11/13;
-    
-}
 
-@media only screen and (max-width: 600px) {
-    #contact-main footer {
-        grid-area: 9/1/11/5;
-    }
-}
 
 /*SKILLS PAGE*/
 
 #skills {
-    
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
 #skills-main {
-    position: absolute;
+    position: relative;
     display: grid;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, calc(100vh/10)) 90px 90px;
+    grid-template-rows: repeat(8, calc(100vh/10)) 90px;
     
 }
 
@@ -728,16 +718,12 @@ input[type="submit"]:hover {
 
 
 #skills-main footer {
-    grid-area: 9/1/11/13;
+    
     width: 100%;
     height: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-    #skills-main footer {
-        grid-area: 11/1/13/5;
-    }
-}
+
 
 #year-path {
     grid-area: 2/1/9/7;
@@ -837,6 +823,4 @@ input[type="submit"]:hover {
 .skill-table td {
     border: 1px solid white;
 }
-
-
 
