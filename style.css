@@ -638,7 +638,7 @@ input, textarea, label {
 
 input[type="email"] {
     width: 20vw;
-    min-width: 400px;
+    min-width: 250px;
 }
 
 textarea {
